@@ -9,7 +9,7 @@ from torchvision import transforms
 from torch.utils.data import DataLoader
 from config import parser
 from dataset import DataSet_Jump
-# from model import VitForImageClassification, Resnet
+# from model import ViTForImageClassification, Resnet
 from model import Resnet
 from optimizer import WarmupAndOrderedScheduler
 from metric import AverageMeter, multi_acc, plot_report, plot_heatmap, write_val_result
@@ -121,13 +121,13 @@ def main():
     if not args.use_gpu:
         args.num_gpus = 1
 
-    train_loader = DataLoader(dataset=train_dataset,
+    train_loader = DataLoader(train_dataset,
                               batch_size=args.batch_size * args.num_gpus,
                               shuffle=True,
                               pin_memory=True,
                               num_workers=args.workers,
                               drop_last=False)
-    val_loader = DataLoader(dataset=val_dataset,
+    val_loader = DataLoader(val_dataset,
                             batch_size=args.batch_size_val * args.num_gpus,
                             shuffle=False,
                             pin_memory=True,

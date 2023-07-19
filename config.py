@@ -7,10 +7,10 @@ parser.add_argument('--file-path', type=str, help='datatset info file path',
                     default='../炭火图片标注_4.xlsx')
 parser.add_argument('--pre-path', type=str, help='datatset info file path',
                     default='../fire_img')
-parser.add_argument('--file-path-v2', type=str, help='datatset info file path',
-                    default='../跳楼数据标注_3期.xlsx')
-parser.add_argument('--pre-path-v2', type=str, help='datatset info file path',
-                    default='../jump_img_v2')
+# parser.add_argument('--file-path-v2', type=str, help='datatset info file path',
+#                     default='../跳楼数据标注_3期.xlsx')
+# parser.add_argument('--pre-path-v2', type=str, help='datatset info file path',
+#                     default='../jump_img_v2')
 
 
 

@@ -18,7 +18,7 @@ class JumpRecord(object):
 
     @property
     def label(self):
-        return self._label
+        return int(self._label)
 
 
 class DataSet_Jump(data.Dataset):
